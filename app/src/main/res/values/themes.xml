@@ -12,6 +12,7 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor">@color/app_bg_color</item>
         <item name="cardBackgroundColor">@color/card_color</item>
+        <item name="cursorColor">@color/white</item>
         <item name="backgroundColor">@color/app_bg_color</item>
     </style>
 

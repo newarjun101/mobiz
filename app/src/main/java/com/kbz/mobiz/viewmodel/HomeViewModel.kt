@@ -18,8 +18,8 @@ import javax.inject.Inject
 class HomeViewModel @Inject constructor(private  val movieRepoImpl: MovieRepoImpl)  : ViewModel(){
 
     private val movieApiResult = MutableStateFlow<ApiResponse<List<MovieVo>?>>(ApiResponse.Loading())
-    private val _movieList = MutableStateFlow<List<MovieVo>>(mutableListOf())
     val getMovieListFromApi: StateFlow<ApiResponse<List<MovieVo>?>> get() = movieApiResult
+    private val _movieList = MutableStateFlow<List<MovieVo>>(mutableListOf())
     val getMovieList: StateFlow<List<MovieVo>> get() = _movieList
     init {
         Log.d("Arjun","Working")
@@ -28,7 +28,6 @@ class HomeViewModel @Inject constructor(private  val movieRepoImpl: MovieRepoImp
     }
     @SuppressLint("SuspiciousIndentation")
      fun getMovieFromApi() {
-
         viewModelScope.launch(Dispatchers.IO) {
             movieRepoImpl.getMovieFromApi().collect {
               movieApiResult.value = it

@@ -2,16 +2,19 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
+    id 'androidx.room'
     id 'com.google.dagger.hilt.android'
 }
-
+room {
+    schemaDirectory "$projectDir/schemas"
+}
 android {
     namespace 'com.kbz.mobiz'
     compileSdk 34
 
     defaultConfig {
         applicationId "com.kbz.mobiz"
-        minSdk 21
+        minSdk 26
         targetSdk 34
         versionCode 1
         versionName "1.0"

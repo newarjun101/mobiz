@@ -5,13 +5,13 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 import com.kbz.mobiz.core.mapper.Mapper
-import com.kbz.mobiz.domain.vos.SearchVo
 
+@Entity(tableName = "searchMovie")
+  data class SearchVo (
 
-@Entity(tableName = "popularMovie")
-data class MovieVo (
     @PrimaryKey(autoGenerate = false)
     val id: Long? = null,
+
     @SerializedName("poster_path")
     @ColumnInfo("poster_path")
     val posterPath: String? = null,
@@ -22,19 +22,5 @@ data class MovieVo (
     @SerializedName("vote_average")
     @ColumnInfo("vote_average")
     val voteAverage: Double? = null,
-) : Mapper<MovieVo,SearchVo>  {
-    override fun  mapper(): SearchVo {
-        return SearchVo(
-            id = this.id,
-            posterPath = posterPath,
-            title = title,
-            voteAverage = voteAverage
-        )
-    }
-
-}
-
-
-
-
+)
 

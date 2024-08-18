@@ -3,6 +3,8 @@ package com.kbz.mobiz.core.services.databaseService
 import android.content.Context
 import androidx.room.Room
 import com.kbz.mobiz.domain.daos.MovieDao
+import com.kbz.mobiz.domain.daos.RecentDao
+import com.kbz.mobiz.domain.daos.SearchMovieDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -25,6 +27,12 @@ class DatabaseModule{
     }
 
     @Provides
-    fun provideRoom(appDatabase: AppDatabase) : MovieDao = appDatabase.movieDao()
+    fun provideMovieRoom(appDatabase: AppDatabase) : MovieDao = appDatabase.movieDao()
+
+    @Provides
+    fun provideSearchMovieRoom(appDatabase: AppDatabase) : SearchMovieDao = appDatabase.searchDao()
+
+    @Provides
+    fun provideRecentRoom(appDatabase: AppDatabase) : RecentDao = appDatabase.recentDao()
 
 }
