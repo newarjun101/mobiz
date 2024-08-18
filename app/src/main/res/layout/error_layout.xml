@@ -6,6 +6,7 @@
     android:layout_height="wrap_content"
     android:id="@+id/error_card"
     app:cardCornerRadius="16dp"
+    android:animateLayoutChanges="true"
     android:visibility="gone"
     android:backgroundTint="@color/hint_red"
     >

@@ -1,4 +1,4 @@
-package com.kbz.mobiz
+package com.kbz.mobiz.presentation.screens
 
 import android.content.Intent
 import android.graphics.Color
@@ -18,11 +18,8 @@ import com.kbz.mobiz.core.arguments.DetailArgument
 import com.kbz.mobiz.core.deligation.OnMovieClick
 import com.kbz.mobiz.core.services.apiService.ApiResponse
 import com.kbz.mobiz.databinding.ActivityMainBinding
-import com.kbz.mobiz.databinding.ErrorLayoutBinding
 import com.kbz.mobiz.domain.vos.MovieVo
 import com.kbz.mobiz.presentation.adapters.MovieRecyclerAdapter
-import com.kbz.mobiz.presentation.screens.MovieDetailActivity
-import com.kbz.mobiz.presentation.screens.SearchActivity
 import com.kbz.mobiz.viewmodel.HomeViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
@@ -36,8 +33,9 @@ class MainActivity : AppCompatActivity(),OnMovieClick {
     }
 
     lateinit var  movieRecyclerView : RecyclerView
-  private  val homeViewModel : HomeViewModel by viewModels()
     lateinit var   adapter : MovieRecyclerAdapter
+  private  val homeViewModel : HomeViewModel by viewModels()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,9 +44,9 @@ class MainActivity : AppCompatActivity(),OnMovieClick {
         val paint = titleView.paint
         val width = paint.measureText(titleView.text.toString())
         val textShader: Shader = LinearGradient(0f, 0f, width, titleView.textSize, intArrayOf(
-            Color.parseColor("#E300FF"),
-            Color.parseColor("#4CAF50"),
-            Color.parseColor("#FF5722")
+            Color.parseColor("#58D4FE"),
+           // Color.parseColor("#4CAF50"),
+            Color.parseColor("#CB55FD")
         ), null, Shader.TileMode.REPEAT)
         titleView.paint.setShader(textShader)
         mainBinding.homeIncludeCustomAppBar.homeSerchField.setOnClickListener {
@@ -112,9 +110,6 @@ class MainActivity : AppCompatActivity(),OnMovieClick {
         DetailArgument.onClickDetail(vo)
         val intent = Intent(this,MovieDetailActivity::class.java)
         startActivity(intent)
-        intent.putExtra("id", "${vo.id}")
-        intent.putExtra("title", "${vo.title}")
-        Toast.makeText(this,"Selected ${vo.title}",Toast.LENGTH_SHORT).show()
     }
     private fun onRetry() {
         mainBinding.progressBar.visibility = View.VISIBLE

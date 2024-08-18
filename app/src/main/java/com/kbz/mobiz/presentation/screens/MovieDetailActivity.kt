@@ -28,19 +28,16 @@ class MovieDetailActivity : AppCompatActivity() {
     var id:  String? = null
     var title : String? = null
     private  val detailViewModel : MovieDetailViewModel by viewModels()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(detailBinding.root)
 
-        getMovieIntent()
         getMovieResult()
         getYoutubeResult()
     }
 
-    private fun getMovieIntent() {
-       id = intent.getStringExtra("id")
-       title = intent.getStringExtra("title")
-    }
+
     @SuppressLint("SetTextI18n")
     private  fun getMovieResult() {
         lifecycleScope.launch(Dispatchers.Main) {
@@ -70,6 +67,8 @@ class MovieDetailActivity : AppCompatActivity() {
                         detailBinding.detailErrorLayoutId.errorTextView.text = "${value.message}"
                         detailBinding.detailErrorLayoutId.tryAgain.setOnClickListener {
                           //  onRetry()
+                            detailViewModel.getMovieDetailFromApi()
+                            detailViewModel.getTrailerVideo()
                         }
 
 
@@ -90,6 +89,7 @@ class MovieDetailActivity : AppCompatActivity() {
                            override fun onReady(youTubePlayer: YouTubePlayer) {
                                val videoId = value[0].key!!
                                youTubePlayer.loadVideo(videoId, 0f)
+
                            }
                        })
                    }

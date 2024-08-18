@@ -29,17 +29,18 @@
             app:layout_constraintTop_toTopOf="parent"
             app:shapeAppearanceOverlay="@style/RoundedSquare"
             app:strokeWidth="5dp" />
-
         <TextView
             android:id="@+id/movie_name_text_view"
-            style="@style/LargeTextStyle"
+            style="@style/NormalTextStyle"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:maxLines="4"
             android:text="test"
+            android:ellipsize="end"
+            android:inputType="none"
+            android:maxLines="2"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
