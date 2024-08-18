@@ -22,6 +22,7 @@ import com.kbz.mobiz.databinding.ErrorLayoutBinding
 import com.kbz.mobiz.domain.vos.MovieVo
 import com.kbz.mobiz.presentation.adapters.MovieRecyclerAdapter
 import com.kbz.mobiz.presentation.screens.MovieDetailActivity
+import com.kbz.mobiz.presentation.screens.SearchActivity
 import com.kbz.mobiz.viewmodel.HomeViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
@@ -50,6 +51,10 @@ class MainActivity : AppCompatActivity(),OnMovieClick {
             Color.parseColor("#FF5722")
         ), null, Shader.TileMode.REPEAT)
         titleView.paint.setShader(textShader)
+        mainBinding.homeIncludeCustomAppBar.homeSerchField.setOnClickListener {
+
+            startActivity(Intent(this,SearchActivity::class.java))
+        }
 
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
         movieRecyclerView = mainBinding.homeMovieRecyclerView

@@ -27,4 +27,24 @@
         android:text="@string/app_name"
         />
 
+    <EditText
+        android:id="@+id/home_serch_field"
+        android:layout_marginHorizontal="@dimen/defaultPadding"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:autofillHints=""
+        android:enabled="true"
+        android:focusable="false"
+        android:inputType="text"
+        android:textSize="@dimen/hint_text_size"
+        android:textColorHint="@color/hint_text_color"
+        android:textColor="@color/white"
+        android:layout_height="36dp"
+        android:hint="@string/search_here"
+        android:maxLines="1"
+        android:drawableRight="@drawable/ic_search"
+        android:drawableTint="@color/hint_text_color"
+        android:background="@drawable/edit_text_style"
+        />
+
 </LinearLayout>
