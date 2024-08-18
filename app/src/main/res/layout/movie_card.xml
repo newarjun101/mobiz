@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    app:cardCornerRadius="16dp"
+    android:id="@+id/movie_card_card"
+    android:background="@color/card_color"
+    android:layout_marginHorizontal="@dimen/defaultMargin"
+    android:layout_marginBottom="@dimen/defaultPadding"
+    android:layout_marginTop="6dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="@color/card_color"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/poster_image_view"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:scaleType= "fitXY"
+            android:padding="8dp"
+            android:src="@drawable/hint_logo"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/RoundedSquare"
+            app:strokeWidth="5dp" />
+
+        <TextView
+            android:id="@+id/movie_name_text_view"
+            style="@style/LargeTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:maxLines="4"
+            android:text="test"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/poster_image_view"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/rating_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Rating : "
+            android:theme="@style/HintTextStyle"
+            app:layout_constraintStart_toStartOf="@+id/movie_name_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/movie_name_text_view" />
+
+        <TextView
+            android:id="@+id/rating_text_view"
+            style="@style/HintTextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:text="rating"
+            android:textAlignment="textStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/rating_title"
+            app:layout_constraintTop_toBottomOf="@+id/movie_name_text_view" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

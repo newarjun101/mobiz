@@ -1,0 +1,51 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Mobiz" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primaryColor</item>
+
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/secondaryColor</item>
+
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/app_bg_color</item>
+        <item name="cardBackgroundColor">@color/card_color</item>
+        <item name="backgroundColor">@color/app_bg_color</item>
+    </style>
+
+    <style name="Theme.Mobiz" parent="Base.Theme.Mobiz" />
+
+    <style name="NormalTextStyle">
+        <item name="android:textSize">@dimen/normal_text_size</item>
+        <item name="android:textColor">@color/normal_text_color</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="HintTextStyle">
+        <item name="android:textSize">@dimen/hint_text_size</item>
+        <item name="android:textColor">@color/hint_text_color</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="LargeTextStyle">
+        <item name="android:textSize">@dimen/largeBodyTextSize</item>
+        <item name="android:textColor">@color/normal_text_color</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="LargeTitleTextStyle">
+        <item name="android:textSize">@dimen/largeTitleTextSize</item>
+        <item name="android:textColor">@color/normal_text_color</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10%</item>
+        <item name="backgroundTint">@android:color/white</item>   </style>
+    <style name="progressBarWhite" parent="@style/Theme.AppCompat">
+        <item name="colorAccent">@color/white</item>
+    </style>
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/hint_text_color</item>
+        <item name="colorControlActivated">#dbca07</item>
+    </style>
+</resources>

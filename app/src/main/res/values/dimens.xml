@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--   margin and padding-->
+    <dimen name="defaultMargin">12dp</dimen>
+    <dimen name="defaultMarginHorizontal">12dp</dimen>
+    <dimen name="defaultMarginVertical">16dp</dimen>
+
+    <!-- padding -->
+    <dimen name="defaultPadding">8dp</dimen>
+    <!--    font size -->
+
+    <dimen name="appBarTitleSize">20sp</dimen>
+    <dimen name="largeBodyTextSize">18sp</dimen>
+    <dimen name="largeTitleTextSize">18sp</dimen>
+    <dimen name="normal_text_size">16sp</dimen>
+    <dimen name="hint_text_size">13sp</dimen>
+
+</resources>
