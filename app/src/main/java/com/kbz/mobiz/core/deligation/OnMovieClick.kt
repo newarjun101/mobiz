@@ -1,7 +1,7 @@
 package com.kbz.mobiz.core.deligation
 
-import com.kbz.mobiz.domain.vos.MovieVo
-import com.kbz.mobiz.domain.vos.SearchVo
+import com.kbz.mobiz.domain.data.vos.MovieVo
+import com.kbz.mobiz.domain.data.vos.SearchVo
 
 
 interface OnMovieClick {

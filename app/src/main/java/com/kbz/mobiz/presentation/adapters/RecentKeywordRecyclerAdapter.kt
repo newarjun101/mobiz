@@ -12,8 +12,8 @@ import com.kbz.mobiz.core.deligation.RecentClickDeligation
 import com.kbz.mobiz.core.extension.getOneDecimalValue
 import com.kbz.mobiz.databinding.MovieCardBinding
 import com.kbz.mobiz.databinding.RecentCardBinding
-import com.kbz.mobiz.domain.vos.MovieVo
-import com.kbz.mobiz.domain.vos.RecentVo
+import com.kbz.mobiz.domain.data.vos.MovieVo
+import com.kbz.mobiz.domain.data.vos.RecentVo
 
 class RecentKeywordRecyclerAdapter(private  val itemClickListener: RecentClickDeligation) : RecyclerView.Adapter<RecentKeywordRecyclerViewHolder>() {
 

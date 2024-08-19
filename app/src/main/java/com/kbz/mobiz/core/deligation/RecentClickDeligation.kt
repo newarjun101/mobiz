@@ -1,6 +1,6 @@
 package com.kbz.mobiz.core.deligation
 
-import com.kbz.mobiz.domain.vos.RecentVo
+import com.kbz.mobiz.domain.data.vos.RecentVo
 
 interface RecentClickDeligation {
 

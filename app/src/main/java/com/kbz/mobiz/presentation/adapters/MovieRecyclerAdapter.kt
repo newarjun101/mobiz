@@ -11,7 +11,7 @@ import com.kbz.mobiz.R
 import com.kbz.mobiz.core.deligation.OnMovieClick
 import com.kbz.mobiz.core.extension.getOneDecimalValue
 import com.kbz.mobiz.databinding.MovieCardBinding
-import com.kbz.mobiz.domain.vos.MovieVo
+import com.kbz.mobiz.domain.data.vos.MovieVo
 
 
  class MovieRecyclerAdapter(private  val itemClickListener: OnMovieClick) : RecyclerView.Adapter<MovieRecyclerViewHolder>() {
@@ -47,7 +47,7 @@ import com.kbz.mobiz.domain.vos.MovieVo
 
   class MovieRecyclerViewHolder(private  val movieBinding: MovieCardBinding) : RecyclerView.ViewHolder(movieBinding.root) {
     val binding = movieBinding
-    fun onItemBind(item : MovieVo,context: Context ){
+    fun onItemBind(item : MovieVo, context: Context ){
         Glide
             .with(context)
             .load("https://image.tmdb.org/t/p/original/${item.posterPath}")

@@ -1,4 +1,4 @@
-package com.kbz.mobiz.domain.vos
+package com.kbz.mobiz.domain.data.vos
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity

@@ -1,4 +1,4 @@
-package com.kbz.mobiz.domain.vos
+package com.kbz.mobiz.domain.data.vos
 
 import com.google.gson.annotations.SerializedName
 

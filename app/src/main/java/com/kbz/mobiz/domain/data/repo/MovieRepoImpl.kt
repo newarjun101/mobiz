@@ -1,24 +1,25 @@
-package com.kbz.mobiz.domain.repo
+package com.kbz.mobiz.domain.data.repo
 
 import android.annotation.SuppressLint
 import com.kbz.mobiz.core.services.apiService.ApiResponse
 import com.kbz.mobiz.core.services.apiService.MovieApiClient
-import com.kbz.mobiz.domain.daos.MovieDao
-import com.kbz.mobiz.domain.daos.RecentDao
-import com.kbz.mobiz.domain.daos.SearchMovieDao
-import com.kbz.mobiz.domain.repo.abstacts.MovieRepo
-import com.kbz.mobiz.domain.vos.MovieDetailVo
-import com.kbz.mobiz.domain.vos.MovieVo
-import com.kbz.mobiz.domain.vos.RecentVo
-import com.kbz.mobiz.domain.vos.SearchVo
-import com.kbz.mobiz.domain.vos.TrailerVo
+import com.kbz.mobiz.domain.data.daos.MovieDao
+import com.kbz.mobiz.domain.data.daos.RecentDao
+import com.kbz.mobiz.domain.data.daos.SearchMovieDao
+import com.kbz.mobiz.domain.data.repo.abstacts.MovieRepo
+import com.kbz.mobiz.domain.data.vos.MovieDetailVo
+import com.kbz.mobiz.domain.data.vos.MovieVo
+import com.kbz.mobiz.domain.data.vos.RecentVo
+import com.kbz.mobiz.domain.data.vos.SearchVo
+import com.kbz.mobiz.domain.data.vos.TrailerVo
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import kotlinx.coroutines.flow.flowOn
 import javax.inject.Inject
 
-class MovieRepoImpl @Inject constructor (private  val apiClient: MovieApiClient,private  val movieDao: MovieDao,private  val searchMovieDao: SearchMovieDao,private  val recentDao: RecentDao) : MovieRepo{
+class MovieRepoImpl @Inject constructor (private  val apiClient: MovieApiClient, private  val movieDao: MovieDao, private  val searchMovieDao: SearchMovieDao, private  val recentDao: RecentDao) :
+    MovieRepo {
     override suspend fun getMovieFromApi(): Flow<ApiResponse<List<MovieVo>?>> = flow<ApiResponse<List<MovieVo>?>> {
         emit(ApiResponse.Loading())
        try {

@@ -10,7 +10,7 @@ import com.kbz.mobiz.R
 import com.kbz.mobiz.core.deligation.SearchClick
 import com.kbz.mobiz.core.extension.getOneDecimalValue
 import com.kbz.mobiz.databinding.MovieCardBinding
-import com.kbz.mobiz.domain.vos.SearchVo
+import com.kbz.mobiz.domain.data.vos.SearchVo
 
 
 class SearchRecyclerAdapter(private  val itemClickListener: SearchClick) : RecyclerView.Adapter<SearchRecyclerViewHolder>() {

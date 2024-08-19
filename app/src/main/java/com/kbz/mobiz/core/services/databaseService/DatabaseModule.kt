@@ -2,9 +2,9 @@ package com.kbz.mobiz.core.services.databaseService
 
 import android.content.Context
 import androidx.room.Room
-import com.kbz.mobiz.domain.daos.MovieDao
-import com.kbz.mobiz.domain.daos.RecentDao
-import com.kbz.mobiz.domain.daos.SearchMovieDao
+import com.kbz.mobiz.domain.data.daos.MovieDao
+import com.kbz.mobiz.domain.data.daos.RecentDao
+import com.kbz.mobiz.domain.data.daos.SearchMovieDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -14,7 +14,7 @@ import javax.inject.Singleton
 
 @Module
 @InstallIn(SingletonComponent::class)
-class DatabaseModule{
+object DatabaseModule{
 
     @Provides
     @Singleton

@@ -7,15 +7,15 @@ import androidx.room.TypeConverter
 import androidx.room.TypeConverters
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
-import com.kbz.mobiz.domain.daos.MovieDao
-import com.kbz.mobiz.domain.daos.RecentDao
-import com.kbz.mobiz.domain.daos.SearchMovieDao
-import com.kbz.mobiz.domain.vos.MovieVo
-import com.kbz.mobiz.domain.vos.RecentVo
-import com.kbz.mobiz.domain.vos.SearchVo
+import com.kbz.mobiz.domain.data.daos.MovieDao
+import com.kbz.mobiz.domain.data.daos.RecentDao
+import com.kbz.mobiz.domain.data.daos.SearchMovieDao
+import com.kbz.mobiz.domain.data.vos.MovieVo
+import com.kbz.mobiz.domain.data.vos.RecentVo
+import com.kbz.mobiz.domain.data.vos.SearchVo
 
 
-@Database(version = 5, entities = [MovieVo::class,SearchVo::class,RecentVo::class], exportSchema = true,
+@Database(version = 5, entities = [MovieVo::class, SearchVo::class, RecentVo::class], exportSchema = true,
     autoMigrations = [
         AutoMigration(4,5)
     ])

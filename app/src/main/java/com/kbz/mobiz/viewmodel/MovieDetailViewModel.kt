@@ -6,10 +6,10 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.kbz.mobiz.core.arguments.DetailArgument
 import com.kbz.mobiz.core.services.apiService.ApiResponse
-import com.kbz.mobiz.domain.repo.MovieRepoImpl
-import com.kbz.mobiz.domain.vos.MovieDetailVo
-import com.kbz.mobiz.domain.vos.MovieVo
-import com.kbz.mobiz.domain.vos.TrailerVo
+import com.kbz.mobiz.domain.data.repo.MovieRepoImpl
+import com.kbz.mobiz.domain.data.vos.MovieDetailVo
+import com.kbz.mobiz.domain.data.vos.MovieVo
+import com.kbz.mobiz.domain.data.vos.TrailerVo
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
