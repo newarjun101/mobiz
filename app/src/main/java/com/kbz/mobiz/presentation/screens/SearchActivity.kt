@@ -9,7 +9,6 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.view.inputmethod.EditorInfo
-import android.view.inputmethod.InputMethodManager
 import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.viewModels
@@ -27,7 +26,6 @@ import com.kbz.mobiz.databinding.ActivitySearchBinding
 import com.kbz.mobiz.domain.data.vos.MovieVo
 import com.kbz.mobiz.domain.data.vos.RecentVo
 import com.kbz.mobiz.domain.data.vos.SearchVo
-import com.kbz.mobiz.presentation.adapters.MovieRecyclerAdapter
 import com.kbz.mobiz.presentation.adapters.RecentKeywordRecyclerAdapter
 import com.kbz.mobiz.presentation.adapters.SearchRecyclerAdapter
 import com.kbz.mobiz.viewmodel.SearchViewModel
@@ -42,17 +40,17 @@ class SearchActivity : AppCompatActivity(),SearchClick,RecentClickDeligation {
         ActivitySearchBinding.inflate(layoutInflater)
     }
 
-    var isSearchClick = false
-    lateinit var  movieRecyclerView : RecyclerView
-    lateinit var  recentRecyclerView : RecyclerView
-    lateinit var   adapter : SearchRecyclerAdapter
-    lateinit var   recentAdapter : RecentKeywordRecyclerAdapter
+    private var isSearchClick = false
+    private lateinit var  movieRecyclerView : RecyclerView
+    private lateinit var  recentRecyclerView : RecyclerView
+    private lateinit var   adapter : SearchRecyclerAdapter
+    private lateinit var   recentAdapter : RecentKeywordRecyclerAdapter
     private lateinit var searchTextField : EditText
     private  val searchViewModel : SearchViewModel by viewModels()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
       //  enableEdgeToEdge()
-        window.attributes.windowAnimations = R.anim.fade_in;
+        window.attributes.windowAnimations = R.anim.fade_in
         setContentView(searchBinding.root)
      /*   ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
@@ -73,8 +71,6 @@ class SearchActivity : AppCompatActivity(),SearchClick,RecentClickDeligation {
         searchTextField.isFocusableInTouchMode = true
         searchTextField.requestFocus()
         onSearch()
-    /*    val imm = getSystemService(INPUT_METHOD_SERVICE) as InputMethodManager
-        imm.showSoftInput(searchTextField, InputMethodManager.SHOW_IMPLICIT)*/
         val paint = titleView.paint
         val width = paint.measureText(titleView.text.toString())
         val textShader: Shader = LinearGradient(0f, 0f, width, titleView.textSize, intArrayOf(
@@ -92,7 +88,7 @@ class SearchActivity : AppCompatActivity(),SearchClick,RecentClickDeligation {
     }
 
 
-    fun onSearch() {
+    private fun onSearch() {
         searchTextField.setOnEditorActionListener { _, actionId, _ ->
             if (actionId == EditorInfo.IME_ACTION_SEARCH) {
                 if(searchTextField.text.toString().trim().isNotEmpty()){
@@ -165,7 +161,6 @@ class SearchActivity : AppCompatActivity(),SearchClick,RecentClickDeligation {
 
     private  fun getRecentFromRoom() {
         lifecycleScope.launch(Dispatchers.Main) {
-
             searchViewModel.getRecentKeywordList.collect{
                     recentAdapter.setMovies(it)
             }
@@ -181,6 +176,7 @@ class SearchActivity : AppCompatActivity(),SearchClick,RecentClickDeligation {
 
     override fun onClickRecent(vo: RecentVo) {
         isSearchClick = true
+        searchTextField.setText(vo.title)
         searchViewModel.getMovieFromApi(vo.title)
         searchBinding.progressBar.visibility = View.VISIBLE
         searchTextField.hideKeyboard()

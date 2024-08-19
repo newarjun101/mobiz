@@ -3,7 +3,6 @@ package com.kbz.mobiz.core.services.apiService
 import com.kbz.mobiz.domain.data.vos.MovieDetailVo
 import com.kbz.mobiz.domain.data.vos.MovieResponseVo
 import com.kbz.mobiz.domain.data.vos.TrailerResponseVo
-import com.kbz.mobiz.domain.data.vos.TrailerVo
 import com.kbz.mobiz.utils.ApiConstant
 import retrofit2.Response
 import retrofit2.http.GET

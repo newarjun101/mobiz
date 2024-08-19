@@ -5,14 +5,8 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.kbz.mobiz.R
-import com.kbz.mobiz.core.deligation.OnMovieClick
 import com.kbz.mobiz.core.deligation.RecentClickDeligation
-import com.kbz.mobiz.core.extension.getOneDecimalValue
-import com.kbz.mobiz.databinding.MovieCardBinding
 import com.kbz.mobiz.databinding.RecentCardBinding
-import com.kbz.mobiz.domain.data.vos.MovieVo
 import com.kbz.mobiz.domain.data.vos.RecentVo
 
 class RecentKeywordRecyclerAdapter(private  val itemClickListener: RecentClickDeligation) : RecyclerView.Adapter<RecentKeywordRecyclerViewHolder>() {

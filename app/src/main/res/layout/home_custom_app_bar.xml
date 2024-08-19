@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/app_bg_color"
     android:paddingHorizontal="@dimen/defaultPadding"
     android:paddingVertical="8dp"
-    android:gravity="left|center"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:gravity="left|center">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/poster_image_view"

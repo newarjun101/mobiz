@@ -4,7 +4,6 @@ import android.annotation.SuppressLint
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.kbz.mobiz.R
@@ -14,7 +13,7 @@ import com.kbz.mobiz.databinding.MovieCardBinding
 import com.kbz.mobiz.domain.data.vos.MovieVo
 
 
- class MovieRecyclerAdapter(private  val itemClickListener: OnMovieClick) : RecyclerView.Adapter<MovieRecyclerViewHolder>() {
+class MovieRecyclerAdapter(private  val itemClickListener: OnMovieClick) : RecyclerView.Adapter<MovieRecyclerViewHolder>() {
 
     private lateinit var  context : Context
     private var mMovieList: MutableList<MovieVo> = ArrayList()
@@ -53,7 +52,7 @@ import com.kbz.mobiz.domain.data.vos.MovieVo
             .load("https://image.tmdb.org/t/p/original/${item.posterPath}")
             .centerCrop()
             .placeholder(R.drawable.hint_logo)
-            .into(movieBinding.posterImageView);
+            .into(movieBinding.posterImageView)
         movieBinding.movieNameTextView.text = item.title
         movieBinding.ratingTextView.text = item.voteAverage.getOneDecimalValue().toString()
     }

@@ -5,7 +5,6 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 import com.kbz.mobiz.core.mapper.Mapper
-import com.kbz.mobiz.domain.data.vos.SearchVo
 
 
 @Entity(tableName = "popularMovie")

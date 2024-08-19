@@ -3,10 +3,7 @@ package com.kbz.mobiz.core.services.databaseService
 import androidx.room.AutoMigration
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import androidx.room.TypeConverter
 import androidx.room.TypeConverters
-import androidx.room.migration.Migration
-import androidx.sqlite.db.SupportSQLiteDatabase
 import com.kbz.mobiz.domain.data.daos.MovieDao
 import com.kbz.mobiz.domain.data.daos.RecentDao
 import com.kbz.mobiz.domain.data.daos.SearchMovieDao

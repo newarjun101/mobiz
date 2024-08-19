@@ -5,7 +5,6 @@ import com.kbz.mobiz.domain.data.vos.MovieDetailVo
 import com.kbz.mobiz.domain.data.vos.MovieVo
 import com.kbz.mobiz.domain.data.vos.RecentVo
 import com.kbz.mobiz.domain.data.vos.SearchVo
-import com.kbz.mobiz.domain.data.vos.TrailerResponseVo
 import com.kbz.mobiz.domain.data.vos.TrailerVo
 import kotlinx.coroutines.flow.Flow
 
