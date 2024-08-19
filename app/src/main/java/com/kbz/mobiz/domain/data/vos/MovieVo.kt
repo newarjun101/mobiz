@@ -1,11 +1,11 @@
-package com.kbz.mobiz.domain.vos
+package com.kbz.mobiz.domain.data.vos
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 import com.kbz.mobiz.core.mapper.Mapper
-import com.kbz.mobiz.domain.vos.SearchVo
+import com.kbz.mobiz.domain.data.vos.SearchVo
 
 
 @Entity(tableName = "popularMovie")
@@ -22,7 +22,7 @@ data class MovieVo (
     @SerializedName("vote_average")
     @ColumnInfo("vote_average")
     val voteAverage: Double? = null,
-) : Mapper<MovieVo,SearchVo>  {
+) : Mapper<MovieVo, SearchVo>  {
     override fun  mapper(): SearchVo {
         return SearchVo(
             id = this.id,

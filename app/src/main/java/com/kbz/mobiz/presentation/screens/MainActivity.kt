@@ -14,11 +14,12 @@ import androidx.appcompat.app.AppCompatDelegate
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.kbz.mobiz.R
 import com.kbz.mobiz.core.arguments.DetailArgument
 import com.kbz.mobiz.core.deligation.OnMovieClick
 import com.kbz.mobiz.core.services.apiService.ApiResponse
 import com.kbz.mobiz.databinding.ActivityMainBinding
-import com.kbz.mobiz.domain.vos.MovieVo
+import com.kbz.mobiz.domain.data.vos.MovieVo
 import com.kbz.mobiz.presentation.adapters.MovieRecyclerAdapter
 import com.kbz.mobiz.viewmodel.HomeViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -39,6 +40,7 @@ class MainActivity : AppCompatActivity(),OnMovieClick {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        window.attributes.windowAnimations = R.anim.fade_in;
         setContentView(mainBinding.root)
         val titleView = mainBinding.homeIncludeCustomAppBar.homeAppBarTitleTextView
         val paint = titleView.paint

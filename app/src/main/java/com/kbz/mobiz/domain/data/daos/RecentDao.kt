@@ -1,12 +1,12 @@
-package com.kbz.mobiz.domain.daos
+package com.kbz.mobiz.domain.data.daos
 
 import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.kbz.mobiz.domain.vos.MovieVo
-import com.kbz.mobiz.domain.vos.RecentVo
+import com.kbz.mobiz.domain.data.vos.MovieVo
+import com.kbz.mobiz.domain.data.vos.RecentVo
 import kotlinx.coroutines.flow.Flow
 
 @Dao

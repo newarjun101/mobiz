@@ -5,11 +5,16 @@
     android:layout_width="match_parent"
     android:background="@color/app_bg_color"
     android:layout_height="match_parent"
+    android:paddingTop="12dp"
     tools:context=".presentation.screens.MainActivity">
 
     <include
         android:id="@+id/home_include_custom_app_bar"
-        layout="@layout/home_custom_app_bar" />
+        layout="@layout/home_custom_app_bar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/home_movie_recycler_view"

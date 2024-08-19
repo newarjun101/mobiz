@@ -1,12 +1,12 @@
-package com.kbz.mobiz.domain.repo.abstacts
+package com.kbz.mobiz.domain.data.repo.abstacts
 
 import com.kbz.mobiz.core.services.apiService.ApiResponse
-import com.kbz.mobiz.domain.vos.MovieDetailVo
-import com.kbz.mobiz.domain.vos.MovieVo
-import com.kbz.mobiz.domain.vos.RecentVo
-import com.kbz.mobiz.domain.vos.SearchVo
-import com.kbz.mobiz.domain.vos.TrailerResponseVo
-import com.kbz.mobiz.domain.vos.TrailerVo
+import com.kbz.mobiz.domain.data.vos.MovieDetailVo
+import com.kbz.mobiz.domain.data.vos.MovieVo
+import com.kbz.mobiz.domain.data.vos.RecentVo
+import com.kbz.mobiz.domain.data.vos.SearchVo
+import com.kbz.mobiz.domain.data.vos.TrailerResponseVo
+import com.kbz.mobiz.domain.data.vos.TrailerVo
 import kotlinx.coroutines.flow.Flow
 
 interface  MovieRepo {

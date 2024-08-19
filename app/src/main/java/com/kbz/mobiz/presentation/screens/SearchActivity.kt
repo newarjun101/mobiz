@@ -17,15 +17,16 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.kbz.mobiz.R
 import com.kbz.mobiz.core.arguments.DetailArgument
 import com.kbz.mobiz.core.deligation.RecentClickDeligation
 import com.kbz.mobiz.core.deligation.SearchClick
 import com.kbz.mobiz.core.extension.hideKeyboard
 import com.kbz.mobiz.core.services.apiService.ApiResponse
 import com.kbz.mobiz.databinding.ActivitySearchBinding
-import com.kbz.mobiz.domain.vos.MovieVo
-import com.kbz.mobiz.domain.vos.RecentVo
-import com.kbz.mobiz.domain.vos.SearchVo
+import com.kbz.mobiz.domain.data.vos.MovieVo
+import com.kbz.mobiz.domain.data.vos.RecentVo
+import com.kbz.mobiz.domain.data.vos.SearchVo
 import com.kbz.mobiz.presentation.adapters.MovieRecyclerAdapter
 import com.kbz.mobiz.presentation.adapters.RecentKeywordRecyclerAdapter
 import com.kbz.mobiz.presentation.adapters.SearchRecyclerAdapter
@@ -51,6 +52,7 @@ class SearchActivity : AppCompatActivity(),SearchClick,RecentClickDeligation {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
       //  enableEdgeToEdge()
+        window.attributes.windowAnimations = R.anim.fade_in;
         setContentView(searchBinding.root)
      /*   ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())

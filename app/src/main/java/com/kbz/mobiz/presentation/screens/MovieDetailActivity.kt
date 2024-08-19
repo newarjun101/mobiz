@@ -31,8 +31,8 @@ class MovieDetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        window.attributes.windowAnimations = R.anim.fade_in;
         setContentView(detailBinding.root)
-
         getMovieResult()
         getYoutubeResult()
     }

@@ -5,8 +5,8 @@ import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.kbz.mobiz.core.services.apiService.ApiResponse
-import com.kbz.mobiz.domain.repo.MovieRepoImpl
-import com.kbz.mobiz.domain.vos.MovieVo
+import com.kbz.mobiz.domain.data.repo.MovieRepoImpl
+import com.kbz.mobiz.domain.data.vos.MovieVo
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
