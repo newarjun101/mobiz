@@ -7,7 +7,6 @@ import android.graphics.Shader
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
@@ -33,14 +32,14 @@ class MainActivity : AppCompatActivity(),OnMovieClick {
      ActivityMainBinding.inflate(layoutInflater)
     }
 
-    lateinit var  movieRecyclerView : RecyclerView
-    lateinit var   adapter : MovieRecyclerAdapter
+    private lateinit var  movieRecyclerView : RecyclerView
+    private lateinit var   adapter : MovieRecyclerAdapter
   private  val homeViewModel : HomeViewModel by viewModels()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        window.attributes.windowAnimations = R.anim.fade_in;
+        window.attributes.windowAnimations = R.anim.fade_in
         setContentView(mainBinding.root)
         val titleView = mainBinding.homeIncludeCustomAppBar.homeAppBarTitleTextView
         val paint = titleView.paint

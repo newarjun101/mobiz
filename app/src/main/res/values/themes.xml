@@ -1,4 +1,4 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
     <style name="Base.Theme.Mobiz" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Primary brand color. -->
@@ -14,6 +14,7 @@
         <item name="cardBackgroundColor">@color/card_color</item>
         <item name="cursorColor">@color/white</item>
         <item name="backgroundColor">@color/app_bg_color</item>
+        <item name="statusBarBackground">@color/app_bg_color</item>
     </style>
 
     <style name="Theme.Mobiz" parent="Base.Theme.Mobiz" />

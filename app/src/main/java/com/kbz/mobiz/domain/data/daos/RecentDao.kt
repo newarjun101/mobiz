@@ -5,7 +5,6 @@ import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.kbz.mobiz.domain.data.vos.MovieVo
 import com.kbz.mobiz.domain.data.vos.RecentVo
 import kotlinx.coroutines.flow.Flow
 

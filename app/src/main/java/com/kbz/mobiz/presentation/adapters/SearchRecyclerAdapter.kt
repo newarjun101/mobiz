@@ -52,7 +52,7 @@ class SearchRecyclerViewHolder(private  val movieBinding: MovieCardBinding) : Re
             .load("https://image.tmdb.org/t/p/original/${item.posterPath}")
             .centerCrop()
             .placeholder(R.drawable.hint_logo)
-            .into(movieBinding.posterImageView);
+            .into(movieBinding.posterImageView)
         movieBinding.movieNameTextView.text = item.title
         movieBinding.ratingTextView.text = item.voteAverage.getOneDecimalValue().toString()
     }

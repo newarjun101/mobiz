@@ -1,18 +1,15 @@
 package com.kbz.mobiz.presentation.screens
 
 import android.annotation.SuppressLint
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
 import androidx.activity.viewModels
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import com.kbz.mobiz.R
-import com.kbz.mobiz.core.extension.getOneDecimalValue
 import com.kbz.mobiz.core.services.apiService.ApiResponse
-import com.kbz.mobiz.databinding.ActivityMainBinding
 import com.kbz.mobiz.databinding.ActivityMovieDetailBinding
-import com.kbz.mobiz.viewmodel.HomeViewModel
 import com.kbz.mobiz.viewmodel.MovieDetailViewModel
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener
@@ -31,7 +28,7 @@ class MovieDetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        window.attributes.windowAnimations = R.anim.fade_in;
+        window.attributes.windowAnimations = R.anim.fade_in
         setContentView(detailBinding.root)
         getMovieResult()
         getYoutubeResult()
@@ -89,7 +86,7 @@ class MovieDetailActivity : AppCompatActivity() {
         }
     }
 
-    fun getYoutubeResult() {
+    private fun getYoutubeResult() {
         lifecycleScope.launch(Dispatchers.Main) {
             detailViewModel.getTrailerResult.collect{
                it.data?.let {value ->

@@ -39,7 +39,7 @@ class HomeViewModel @Inject constructor(private  val movieRepoImpl: MovieRepoImp
         }
     }
 
-     fun getMovieFromRoom() {
+     private fun getMovieFromRoom() {
         viewModelScope.launch(Dispatchers.IO) {
             movieRepoImpl.getMovieFromRoom().collect {
             //  rateApiResult.value = it

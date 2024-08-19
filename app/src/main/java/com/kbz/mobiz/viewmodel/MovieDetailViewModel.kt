@@ -8,7 +8,6 @@ import com.kbz.mobiz.core.arguments.DetailArgument
 import com.kbz.mobiz.core.services.apiService.ApiResponse
 import com.kbz.mobiz.domain.data.repo.MovieRepoImpl
 import com.kbz.mobiz.domain.data.vos.MovieDetailVo
-import com.kbz.mobiz.domain.data.vos.MovieVo
 import com.kbz.mobiz.domain.data.vos.TrailerVo
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers

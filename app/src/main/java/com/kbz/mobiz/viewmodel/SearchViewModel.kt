@@ -6,7 +6,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.kbz.mobiz.core.services.apiService.ApiResponse
 import com.kbz.mobiz.domain.data.repo.MovieRepoImpl
-import com.kbz.mobiz.domain.data.vos.MovieVo
 import com.kbz.mobiz.domain.data.vos.RecentVo
 import com.kbz.mobiz.domain.data.vos.SearchVo
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -44,7 +43,7 @@ class SearchViewModel @Inject constructor(private  val movieRepoImpl: MovieRepoI
         }
     }
 
-    fun getMovieFromRoom() {
+    private fun getMovieFromRoom() {
         viewModelScope.launch(Dispatchers.IO) {
             movieRepoImpl.getSearchMovieFromRoom().collect {
                 //  rateApiResult.value = it
@@ -54,7 +53,7 @@ class SearchViewModel @Inject constructor(private  val movieRepoImpl: MovieRepoI
             }
         }
     }
-    fun getRecentKeywordFromRoom() {
+    private fun getRecentKeywordFromRoom() {
         viewModelScope.launch(Dispatchers.IO) {
             movieRepoImpl.getAllRecentKeywords().collect {
                 //  rateApiResult.value = it
