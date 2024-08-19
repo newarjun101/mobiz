@@ -22,7 +22,7 @@ import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class MovieDetailActivity : AppCompatActivity() {
-    private  val   detailBinding : ActivityMovieDetailBinding by lazy {
+    private val detailBinding : ActivityMovieDetailBinding by lazy {
         ActivityMovieDetailBinding.inflate(layoutInflater)
     }
     var id:  String? = null
@@ -37,6 +37,16 @@ class MovieDetailActivity : AppCompatActivity() {
         getYoutubeResult()
     }
 
+    override fun onDestroy() {
+        detailBinding.movieInfoInclude.youtubePlayerView.addYouTubePlayerListener(object : AbstractYouTubePlayerListener() {
+            override fun onReady(youTubePlayer: YouTubePlayer) {
+                youTubePlayer.pause()
+
+            }
+        })
+        super.onDestroy()
+
+    }
 
     @SuppressLint("SetTextI18n")
     private  fun getMovieResult() {
@@ -97,4 +107,5 @@ class MovieDetailActivity : AppCompatActivity() {
             }
         }
     }
+
 }

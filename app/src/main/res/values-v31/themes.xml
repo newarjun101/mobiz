@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Base.Theme.Mobiz" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="android:windowSplashScreenBackground">@color/app_bg_color</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/secondaryColor</item>
+
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@color/app_bg_color</item>
+        <item name="cardBackgroundColor">@color/card_color</item>
+        <item name="cursorColor">@color/white</item>
+        <item name="backgroundColor">@color/app_bg_color</item>
+    </style>
+</resources>
